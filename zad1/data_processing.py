@@ -24,8 +24,8 @@ class CsvFileReader:
         return self.data
     
     def to_csv(self):
-        with open("output_file.csv", 'w') as csvfile:
-            writer = csv.writer(csvfile)    
+        with open("output_file.csv", 'w', newline='') as csvfile:
+            writer = csv.writer(csvfile)  
             for i in self.to_list():
                 writer.writerow(i)
         return None
